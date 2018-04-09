@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+    
+    <script>
+       function setup() {
+            createCanvas(600,600);
+            
+            //starts with black background
+             background(255);
+        }
+
+        function draw() {
+            //thickness of shapes
+            strokeWeight(2,mouseX,mouseY)
+            
+            //ellipse
+             ellipse(mouseX,mouseY,mouseX,mouseY);
+           
+             ellipse(100,100,100,100)
+             rect(400,500,100,100)
+            
+            
+            
+            
+            
+        }
+        
+        function mouseMoved(){
+            //change to random colors
+            fill(random(255),random(255),random(255))
+            //small ellipses on top of other ellipses
+            ellipse(mouseX,mouseY,60,65)
+            ellipse(mouseX,mouseY,70,45)
+            ellipse(mouseX,mouseY,30,30)
+            //line starting from middle 
+            line(mouseX,mouseY,300,250)
+            triangle(30,20,58,20,86,75)
+            rect(500,500,100,100)
+            rect(10,500,100,100)
+            
+        }
+        
+       function mousePressed(){
+           //transparent ellipse
+           fill(50)
+        }
+            
+        
+        
+        
+        function mouseDragged(){
+           fill (random(255), random(255),random(255),(50));
+           //lines from all four corners
+            line( mouseX,mouseY,0,0)
+            line( mouseX,mouseY,600,0)
+            line( mouseX,mouseY,0,600)
+            line( mouseX,mouseY,width,height)
+            ellipse(mouseX,mouseY,100,100)
+            ellipse(mouseX,mouseY,50,50
+            )
+        
+         }
+        
+        function keyPressed(){
+            //press any key changes background color
+            background(random(255),random(255),random(255))
+        }
+    </script>
+</head>
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/kevina6321/p5js/blob/master/interaction-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+
+
+</html>
